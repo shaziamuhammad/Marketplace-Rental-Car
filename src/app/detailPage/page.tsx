@@ -1,7 +1,8 @@
+// src\app\detailPage\page.tsx
 "use client";
 
 import React from "react";
-import Sidebar from "@/components/Sidebar";
+import SideBars from "@/components/SideBars"
 import Image from "next/image";
 import Cards from "@/components/Cards";
 import Link from "next/link";
@@ -11,7 +12,7 @@ const Page = () => {
     <div className="flex  min-h-screen mr-10 ml-10">
       {/* Sidebar Section */}
       <div className="first hidden sm:flex w-[25%]">
-        <Sidebar />
+        <SideBars />
       </div>
 
       {/* Main Content */}
@@ -208,7 +209,7 @@ const Page = () => {
             </Link>
           </div>
           </section>
-          <Cards/>
+          {/* <Cards/> */}
         </div>
       </div>
       

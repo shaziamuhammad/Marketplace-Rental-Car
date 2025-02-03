@@ -5,6 +5,9 @@ import Footer from "./Footer";
 
 export default function FooterHandler() {
   const pathname = usePathname();
+  if (!pathname) {
+    return null; // Do not render Footer if pathname is null
+  }
 
   // Paths where footer should not appear
   const noFooterPaths = ["/dashboardPage"];

@@ -1,0 +1,13 @@
+Test Case ID,Description,Preconditions,Steps,Expected Result,Actual Result,Status,Remarks
+TC001,Validate product (car) listing,None,"1. Open the product page.
+2. Verify car details are displayed.",Cars are displayed with accurate details fetched from Sanity.,Cars are displayed with accurate details fetched from Sanity.,Pass,No issues found.
+TC002,Test responsiveness of the website,None,"1. Resize the browser window.
+2. Check layout adjustments on different devices.",The layout adjusts correctly for all screen sizes.,The layout adjusts correctly for all screen sizes.,Pass,Fully responsive design verified.
+TC003,Validate dynamic data fetching from Sanity,Sanity API connected and configured.,"1. Load the website.
+2. Verify that car details are dynamically loaded from Sanity.",Car data is fetched successfully from Sanity and displayed.,Car data is fetched successfully from Sanity and displayed.,Pass,Dynamic data fetching works as expected.
+TC004,Test deployment and environment setup on Vercel,Vercel deployment configured with environment variables.,"1. Open the deployed website.
+2. Verify functionality with environment variables.",Website is deployed successfully and functions correctly.,Website is deployed successfully and functions correctly.,Pass,Deployment on Vercel verified.
+TC005,Verify Google Maps integration,Google Maps API key is configured.,"1. Search for a location.
+2. Verify the map renders correctly with location markers.",Google Maps displays location markers accurately.,Google Maps displays location markers accurately.,Pass,Google Maps integration works as expected.
+TC006,Test payment method functionality (pending),None,"1. Add a car to the cart.
+2. Proceed to payment (implementation pending).",Payment functionality to be implemented.,Payment functionality is not yet implemented.,Pending,Payment method implementation required.
