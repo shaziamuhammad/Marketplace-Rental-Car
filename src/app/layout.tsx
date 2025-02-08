@@ -5,6 +5,8 @@ import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "../components/Navbar"
 import FooterHandler from "@/components/FooterHandler";
+import { CartProvider } from "@/contexts/CartContext";
+import { Toaster } from "sonner";
 // const inter = Inter({ subsets: ["latin"] });
  const geistSans = localFont({
  src: "./fonts/GeistVF.woff",
@@ -40,9 +42,13 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <CartProvider>
         <Navbar/>
         {children}
         <FooterHandler/>
+        <Toaster />
+        
+        </CartProvider>
         </body>
     </html>
   );

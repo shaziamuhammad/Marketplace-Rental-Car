@@ -1,8 +1,12 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShoppingCart } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 
 export default function Header() {
+  const { cart } = useCart()
   return (
     <div className="h-auto  w-full flex flex-wrap items-center justify-between px-4 py-4 bg-white">
       {/* Logo */}
@@ -58,6 +62,14 @@ export default function Header() {
             className="w-[36px] h-[36px]"
           />
         </a>
+        <Link href="/cart" className="text-gray-500 hover:text-gray-700 relative">
+              <ShoppingCart className="h-6 w-6" />
+              {cart.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                  {cart.length}
+                </span>
+              )}
+            </Link>
         <a href="#">
           <Image
             src="/profile.png"
